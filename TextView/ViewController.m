@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "UITextView+ZYZTextView.h"
 @interface ViewController ()
 
 @end
@@ -16,7 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    UITextView *vc = [[UITextView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    vc.zyz_placeholder = @"请输入。。。。";
+    vc.zyz_placeholderFont = [UIFont systemFontOfSize:10];
+    [self.view addSubview:vc];
 }
 
 
